@@ -24,6 +24,7 @@ class UserAdmin(BaseUserAdmin):
                     "is_active",
                     "is_staff",
                     "is_superuser",
+                    "groups"
                 )
             },
         ),
@@ -52,3 +53,9 @@ class UserAdmin(BaseUserAdmin):
 
 
 admin.site.register(models.User, UserAdmin)
+admin.site.register(models.Acessorio)
+admin.site.register(models.Categoria)
+admin.site.register(models.Cor)
+admin.site.register(models.Marca)
+admin.site.register(models.Modelo)
+admin.site.register(models.Veiculo)
