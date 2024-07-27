@@ -3,7 +3,7 @@ from core.models import Modelo, Cor, Acessorio
 from uploader.models import Image
 
 class Veiculo(models.Model):
-    modelo = models.ForeignKey(Modelo, on_delete=models.CASCADE, related_name="veiculos")
+    foto_veiculo = models.ForeignKey(Modelo, on_delete=models.CASCADE, related_name="veiculos")
     cor = models.ForeignKey(Cor, on_delete=models.CASCADE, related_name="veiculos")
     ano = models.IntegerField(null=True, default=0)
     preco = models.DecimalField(max_digits=10, decimal_places=2, null=True, default=0)
